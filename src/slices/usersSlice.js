@@ -5,14 +5,14 @@ const initialState = [
     id: 1,
     name: "Uday Kiran Darla",
     email: "uday@example.com",
-    status: "active",
+    status: "Active",
     role: "Admin",
   },
   {
     id: 2,
     name: "Jane Doe",
     email: "jane@example.com",
-    status: "active",
+    status: "Active",
     role: "Viewer",
   },
 ];

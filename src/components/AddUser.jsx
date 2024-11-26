@@ -65,7 +65,8 @@ const AddUser = ({ setisAddUserModalOpen }) => {
                 errors.role ? "border-red-500" : ""
               }`}
             >
-              <option value="select role">Select Role</option>
+              <option value="">Select Role</option>
+
               { roles.map((role) => ( <option key={role.id} value={role.name}>{role.name}</option> ))}  
 
               <option value="No Role">Not Assigned</option>

@@ -54,6 +54,7 @@ const UserManagement = () => {
       { isDeleteUserModalOpen && <DeleteUser 
       userId={currentUser.id} setisDeleteUserModalOpen={setisDeleteUserModalOpen} /> } 
       {isEditUserModalOpen && (
+        
         <EditUser
           setisEditUserModalOpen={setisEditUserModalOpen}
           user={currentUser}

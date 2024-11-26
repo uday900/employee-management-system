@@ -5,6 +5,7 @@ import { updateUser } from "../slices/usersSlice";
 
 const EditUser = ({ user, setisEditUserModalOpen }) => {
     const dispatch = useDispatch();
+    console.log(user, "user details here")
   const {
     register,
     handleSubmit,
@@ -13,9 +14,9 @@ const EditUser = ({ user, setisEditUserModalOpen }) => {
     defaultValues: {
       name: user?.name || "",
       email: user?.email || "",
-      role: user?.role || "User",
+      role: user?.role || "",
       phone: user?.phone || "",
-      status: user?.status || "Active",
+      status: user?.status || "",
     },
   });
 
@@ -56,7 +57,7 @@ const EditUser = ({ user, setisEditUserModalOpen }) => {
           <div className="mb-4">
             <label className="block font-medium mb-2">Role</label>
             <select
-              {...register("role", { required: "Role is required" })}
+              {...register("role")}
               className="border p-2 rounded w-full"
             >
               <option value="Admin">Admin</option>
@@ -64,7 +65,7 @@ const EditUser = ({ user, setisEditUserModalOpen }) => {
               <option value="Editor">Editor</option>
               <option value="Viewer">Viewer</option>
             </select>
-            {errors.role && <p className="text-red-500 text-sm">{errors.role.message}</p>}
+            {/* {errors.role && <p className="text-red-500 text-sm">{errors.role.message}</p>} */}
           </div>
 
           {/* Phone */}
