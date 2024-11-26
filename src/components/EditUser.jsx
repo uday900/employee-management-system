@@ -1,10 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../slices/usersSlice";
 
 const EditUser = ({ user, setisEditUserModalOpen }) => {
     const dispatch = useDispatch();
+    const roles = useSelector((state) => state.roles);
     console.log(user, "user details here")
   const {
     register,
@@ -60,10 +61,14 @@ const EditUser = ({ user, setisEditUserModalOpen }) => {
               {...register("role")}
               className="border p-2 rounded w-full"
             >
-              <option value="Admin">Admin</option>
-              <option value="User">User</option>
-              <option value="Editor">Editor</option>
-              <option value="Viewer">Viewer</option>
+               {/* <option value="">Select Role</option> */}
+              {
+                roles.map((role) => (
+                  <option key={role.id} value={role.name}>{role.name}</option>
+                ))
+              }
+             
+              
             </select>
             {/* {errors.role && <p className="text-red-500 text-sm">{errors.role.message}</p>} */}
           </div>
