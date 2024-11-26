@@ -37,7 +37,7 @@ To run the project locally, follow these steps:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/role-based-access-control-ui.git
+git clone https://github.com/uday900/-Role-Based-Access-Control-UI.git
 cd role-based-access-control-ui
 
 Install Dependencies: npm install
