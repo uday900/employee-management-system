@@ -32,22 +32,7 @@ const Navbar = () => {
           </div>
           </>
         )}
-        {/* <div className="bg-[#415059] text-white p-6 fixed top-0 left-0  translate-x-0 md:static md:translate-x-0">
-         
-            <Sidebar />
-            <button
-              onClick={() => setIsSidebarOpen(false)}
-              className="text-sm mt-6 md:hidden block text-gray-400 hover:text-[#FD7E00]"
-            >
-              Close
-            </button>
-          
-
-
-        </div> */}
-
-
-        <h1 className="text-2xl font-bold">RBAC Dashboard</h1>
+        <h1 className="text-2xl font-bold">Administration Dashboard</h1>
         <ul className="flex space-x-4 hidden md:flex ">
           <li>
             <Link to="/" className="hover:text-gray-400">
